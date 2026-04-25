@@ -117,7 +117,7 @@ SEQUENCE_decode_xer(const asn_codec_ctx_t *opt_codec_ctx,
 		                ? *(void**)((char*)st + elm->memb_offset)
 		                : (void*)((char*)st + elm->memb_offset);
 	                if(choice_ptr) {
-		                unsigned int *present __attribute__((unused)) = (unsigned int*)choice_ptr;
+		                unsigned int *present CC_NOTUSED = (unsigned int*)choice_ptr;
 		                ASN_DEBUG("OPEN_TYPE decoded: present=%u", *present);
 	                }
                 }
