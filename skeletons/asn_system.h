@@ -103,6 +103,7 @@ typedef	unsigned int	uint32_t;
 #else
 #define CC_ATTRIBUTE(attr)
 #endif
+
 #if defined(__GNUC__) && ((__GNUC__ == 4 && __GNUC_MINOR__>= 4) || __GNUC__ > 4)
 #define CC_PRINTFLIKE(fmt, var) CC_ATTRIBUTE(format(gnu_printf, fmt, var))
 #elif defined(__GNUC__)
@@ -114,13 +115,39 @@ typedef	unsigned int	uint32_t;
 #else
 #define CC_PRINTFLIKE(fmt, var)
 #endif
+
+
+
 #define	CC_NOTUSED                  CC_ATTRIBUTE(unused)
+
 #ifndef CC_ATTR_NO_SANITIZE
 #if	__GNUC__ < 8
 #define CC_ATTR_NO_SANITIZE(what)
 #else
 #define CC_ATTR_NO_SANITIZE(what)   CC_ATTRIBUTE(no_sanitize(what))
 #endif
+#endif
+
+#if	__GNUC__ >= 3 || defined(__clang__)
+#define ASN_DEFINE_CONSTRUCTOR(_func) static void __attribute__((constructor)) _func(void);
+#elif defined(_MSC_VER)
+
+#ifdef _M_IX86
+#define ASN_MSVC_SYMBOL_PREFIX "_"
+#else
+#define ASN_MSVC_SYMBOL_PREFIX ""
+#endif
+
+#define ASN_MSVC_CTOR(_func, _sym_prefix) \
+__pragma(section(".CRT$XCU",read)) \
+static void _func(void); \
+__declspec(allocate(".CRT$XCU")) void (*_func##_wrapper)(void) = _func; \
+__pragma(comment(linker,"/include:" _sym_prefix #_func "_wrapper")) \
+static void _func(void)
+
+#define ASN_DEFINE_CONSTRUCTOR(_func) \
+  ASN_MSVC_CTOR(_func, ASN_MSVC_SYMBOL_PREFIX)
+
 #endif
 
 /* Figure out if thread safety is requested */
