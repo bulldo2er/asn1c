@@ -35,6 +35,16 @@
 #include <assert.h>
 #include <errno.h>
 
+#if	__GNUC__ >= 3 || defined(__clang__)
+#define CC_ATTRIBUTE(attr)    __attribute__((attr))
+#else
+#define CC_ATTRIBUTE(attr)
+#endif
+
+
+#define	CC_NOTUSED                  CC_ATTRIBUTE(unused)
+
+
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif

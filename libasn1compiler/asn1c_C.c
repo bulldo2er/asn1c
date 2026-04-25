@@ -1317,11 +1317,11 @@ find_column_index(arg_t *arg, asn1c_ioc_table_and_objset_t *opt_ioc, const char 
 
 }
 
-static int __attribute__((unused))
+static int CC_NOTUSED
 emit_xer_open_type_finder(arg_t *arg, 
-                          asn1p_expr_t *expr __attribute__((unused)), 
-                          asn1c_ioc_table_and_objset_t *opt_ioc __attribute__((unused)),
-                          const char *column_name __attribute__((unused))) {
+                          asn1p_expr_t *expr CC_NOTUSED, 
+                          asn1c_ioc_table_and_objset_t *opt_ioc CC_NOTUSED,
+                          const char *column_name CC_NOTUSED) {
     /* Similar to EndApplicationMessage_msg__op_finder in EndApplicationMessage.c
      * but generated properly from the IOC table
      */

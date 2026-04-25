@@ -2,6 +2,7 @@
 #define	ASN1_COMPILER_LANGUAGE_C_H
 
 #include "asn1c_lang.h"
+#include "asn1_common.h"
 
 int asn1c_lang_C_type_REFERENCE(arg_t *);
 int asn1c_lang_C_type_EXTENSIBLE(arg_t *);
@@ -17,7 +18,7 @@ int asn1c_lang_C_type_REAL(arg_t *);
 int asn1c_lang_C_type_SIMPLE_TYPE(arg_t *);
 int asn1c_lang_C_type_REFERENCE_Value(arg_t *);
 
-static asn1_language_map_t asn1_lang_C[] __attribute__ ((unused)) = {
+static asn1_language_map_t asn1_lang_C[] CC_NOTUSED = {
 	{ AMT_VALUE, A1TC_REFERENCE,	asn1c_lang_C_type_REFERENCE_Value },
 
 	{ AMT_TYPE, A1TC_REFERENCE,	asn1c_lang_C_type_REFERENCE },

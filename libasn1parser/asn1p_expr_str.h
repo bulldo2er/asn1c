@@ -6,12 +6,9 @@
 #define	ASN1_PARSER_EXPR_STR_H
 
 #include <assert.h>
+#include "asn1_common.h"
 
-#ifndef	__GNUC__
-#define	__attribute__(x)	/* unused */
-#endif
-
-static char *asn1p_expr_type2str[] __attribute__ ((unused)) = {
+static char *asn1p_expr_type2str[] CC_NOTUSED = {
 	[ ASN_CONSTR_SEQUENCE ]	 = "SEQUENCE",
 	[ ASN_CONSTR_CHOICE ]	 = "CHOICE",
 	[ ASN_CONSTR_SET ]	 = "SET",
@@ -54,7 +51,7 @@ static char *asn1p_expr_type2str[] __attribute__ ((unused)) = {
  */
 #define ASN_EXPR_TYPE2STR(type) _asn1p_expr_type2string(type)
 
-static inline char * __attribute__((unused))
+static inline char * CC_NOTUSED
 _asn1p_expr_type2string(asn1p_expr_type_e type) {
     assert((signed int)type >= 0);
     if(type < sizeof(asn1p_expr_type2str)/sizeof(asn1p_expr_type2str[0]))

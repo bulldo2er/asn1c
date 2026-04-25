@@ -1,12 +1,10 @@
 #ifndef	ASN1_PARSER_EXPR2UCLASS_H
 #define	ASN1_PARSER_EXPR2UCLASS_H
 
-#ifndef	__GNUC__
-#define	__attribute__(x)	/* unused */
-#endif
+#include "asn1_common.h"
 
 static int expr_type2uclass_value[ASN_EXPR_TYPE_MAX]
-		__attribute__ ((unused)) = {
+		CC_NOTUSED = {
 	[ ASN_BASIC_BOOLEAN ]		= 1,
 	[ ASN_BASIC_INTEGER ]		= 2,
 	[ ASN_BASIC_BIT_STRING ]	= 3,
@@ -41,7 +39,7 @@ static int expr_type2uclass_value[ASN_EXPR_TYPE_MAX]
 	[ ASN_STRING_BMPString ]	= 30,
 };
 
-static enum asn1p_expr_type expr_utag2type[32] __attribute__ ((unused)) = {
+static enum asn1p_expr_type expr_utag2type[32] CC_NOTUSED = {
 	[ 0 ]	= 0,			/* If zero length, end-of-content */
 	[ 1 ]	= ASN_BASIC_BOOLEAN,
 	[ 2 ]	= ASN_BASIC_INTEGER,

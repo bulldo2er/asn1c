@@ -36,7 +36,9 @@ typedef struct compiler_streams {
 	} destination[OT_MAX];
 } compiler_streams_t;
 
-static char *_compiler_stream2str[] __attribute__ ((unused))
+#include "asn1_common.h"
+
+static char *_compiler_stream2str[] CC_NOTUSED
     = { "IGNORE", "INCLUDES", "DEPS", "FWD-DECLS", "FWD-DEFS", "TYPE-DECLS", "FUNC-DECLS", "POST-INCLUDE", "IOC-TABLES", "CTABLES", "CODE", "CTDEFS", "STAT-DEFS" };
 
 int asn1c_compiled_output(arg_t *arg, const char *file, int lineno,
