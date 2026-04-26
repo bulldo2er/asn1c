@@ -4336,8 +4336,7 @@ emit_type_DEF(arg_t *arg, asn1p_expr_t *expr, enum tvm_compat tv_mode, int tags_
 		OUT("static asn_TYPE_descriptor_t asn_DEF_%s;\n", MKID(expr));
 		OUT("ASN_DEFINE_CONSTRUCTOR(asn_DEF_%s_%d_alias_init)\n",
 		    MKID(expr), expr->_type_unique_index);
-		OUT("static void asn_DEF_%s_%d_alias_init(void) {\n",
-		    MKID(expr), expr->_type_unique_index);
+		OUT("{\n");
 		OUT("\tasn_DEF_%s = asn_DEF_%s_%d;\n", MKID(expr), MKID(expr), expr->_type_unique_index);
 		OUT("}\n");
 		OUT("#endif\n");

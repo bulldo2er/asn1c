@@ -129,7 +129,7 @@ typedef	unsigned int	uint32_t;
 #endif
 
 #if	__GNUC__ >= 3 || defined(__clang__)
-#define ASN_DEFINE_CONSTRUCTOR(_func) static void __attribute__((constructor)) _func(void);
+#define ASN_DEFINE_CONSTRUCTOR(_func) static void __attribute__((constructor)) _func(void)
 #elif defined(_MSC_VER)
 
 #ifdef _M_IX86
@@ -148,6 +148,8 @@ static void _func(void)
 #define ASN_DEFINE_CONSTRUCTOR(_func) \
   ASN_MSVC_CTOR(_func, ASN_MSVC_SYMBOL_PREFIX)
 
+#else
+#define ASN_DEFINE_CONSTRUCTOR(_func) static void _func(void)
 #endif
 
 /* Figure out if thread safety is requested */
