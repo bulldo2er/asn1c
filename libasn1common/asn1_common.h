@@ -23,6 +23,11 @@
  * SUCH DAMAGE.
  *
  */
+
+#ifndef	ASN_COMMON_H
+#define	ASN_COMMON_H
+
+ 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
@@ -77,3 +82,6 @@
 #endif
 #define snprintf _snprintf
 #endif /* _WIN32 */
+
+
+#endif	/* ASN_COMMON_H */
