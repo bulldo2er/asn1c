@@ -97,7 +97,8 @@ extern asn_TYPE_descriptor_t asn_DEF_type2Bit __attribute__((weak, alias("asn_DE
 #else
 static asn_TYPE_descriptor_t asn_DEF_type2Bit_3;
 static asn_TYPE_descriptor_t asn_DEF_type2Bit;
-__attribute__((constructor)) static void asn_DEF_type2Bit_3_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_type2Bit_3_alias_init)
+{
 	asn_DEF_type2Bit = asn_DEF_type2Bit_3;
 }
 #endif
@@ -133,7 +134,8 @@ extern asn_TYPE_descriptor_t asn_DEF_type4Bit __attribute__((weak, alias("asn_DE
 #else
 static asn_TYPE_descriptor_t asn_DEF_type4Bit_7;
 static asn_TYPE_descriptor_t asn_DEF_type4Bit;
-__attribute__((constructor)) static void asn_DEF_type4Bit_7_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_type4Bit_7_alias_init)
+{
 	asn_DEF_type4Bit = asn_DEF_type4Bit_7;
 }
 #endif
@@ -196,7 +198,8 @@ extern asn_TYPE_descriptor_t asn_DEF_content __attribute__((weak, alias("asn_DEF
 #else
 static asn_TYPE_descriptor_t asn_DEF_content_2;
 static asn_TYPE_descriptor_t asn_DEF_content;
-__attribute__((constructor)) static void asn_DEF_content_2_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_content_2_alias_init)
+{
 	asn_DEF_content = asn_DEF_content_2;
 }
 #endif
@@ -723,7 +726,8 @@ extern asn_TYPE_descriptor_t asn_DEF_items __attribute__((weak, alias("asn_DEF_i
 #else
 static asn_TYPE_descriptor_t asn_DEF_items_4;
 static asn_TYPE_descriptor_t asn_DEF_items;
-__attribute__((constructor)) static void asn_DEF_items_4_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_items_4_alias_init)
+{
 	asn_DEF_items = asn_DEF_items_4;
 }
 #endif
@@ -760,7 +764,8 @@ extern asn_TYPE_descriptor_t asn_DEF_branch1 __attribute__((weak, alias("asn_DEF
 #else
 static asn_TYPE_descriptor_t asn_DEF_branch1_3;
 static asn_TYPE_descriptor_t asn_DEF_branch1;
-__attribute__((constructor)) static void asn_DEF_branch1_3_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_branch1_3_alias_init)
+{
 	asn_DEF_branch1 = asn_DEF_branch1_3;
 }
 #endif
@@ -771,7 +776,8 @@ extern asn_TYPE_descriptor_t asn_DEF_items __attribute__((weak, alias("asn_DEF_i
 #else
 static asn_TYPE_descriptor_t asn_DEF_items_9;
 static asn_TYPE_descriptor_t asn_DEF_items;
-__attribute__((constructor)) static void asn_DEF_items_9_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_items_9_alias_init)
+{
 	asn_DEF_items = asn_DEF_items_9;
 }
 #endif
@@ -808,7 +814,8 @@ extern asn_TYPE_descriptor_t asn_DEF_branch2 __attribute__((weak, alias("asn_DEF
 #else
 static asn_TYPE_descriptor_t asn_DEF_branch2_8;
 static asn_TYPE_descriptor_t asn_DEF_branch2;
-__attribute__((constructor)) static void asn_DEF_branch2_8_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_branch2_8_alias_init)
+{
 	asn_DEF_branch2 = asn_DEF_branch2_8;
 }
 #endif
@@ -819,7 +826,8 @@ extern asn_TYPE_descriptor_t asn_DEF_nested __attribute__((weak, alias("asn_DEF_
 #else
 static asn_TYPE_descriptor_t asn_DEF_nested_2;
 static asn_TYPE_descriptor_t asn_DEF_nested;
-__attribute__((constructor)) static void asn_DEF_nested_2_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_nested_2_alias_init)
+{
 	asn_DEF_nested = asn_DEF_nested_2;
 }
 #endif
@@ -1445,7 +1453,8 @@ extern asn_TYPE_descriptor_t asn_DEF_encoding __attribute__((weak, alias("asn_DE
 #else
 static asn_TYPE_descriptor_t asn_DEF_encoding_5;
 static asn_TYPE_descriptor_t asn_DEF_encoding;
-__attribute__((constructor)) static void asn_DEF_encoding_5_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_encoding_5_alias_init)
+{
 	asn_DEF_encoding = asn_DEF_encoding_5;
 }
 #endif

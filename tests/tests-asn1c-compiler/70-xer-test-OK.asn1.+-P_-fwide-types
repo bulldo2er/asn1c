@@ -799,7 +799,8 @@ extern asn_TYPE_descriptor_t asn_DEF_enum __attribute__((weak, alias("asn_DEF_en
 #else
 static asn_TYPE_descriptor_t asn_DEF_enum_4;
 static asn_TYPE_descriptor_t asn_DEF_enum;
-__attribute__((constructor)) static void asn_DEF_enum_4_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_enum_4_alias_init)
+{
 	asn_DEF_enum = asn_DEF_enum_4;
 }
 #endif
@@ -2318,7 +2319,8 @@ extern asn_TYPE_descriptor_t asn_DEF_encoding __attribute__((weak, alias("asn_DE
 #else
 static asn_TYPE_descriptor_t asn_DEF_encoding_5;
 static asn_TYPE_descriptor_t asn_DEF_encoding;
-__attribute__((constructor)) static void asn_DEF_encoding_5_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_encoding_5_alias_init)
+{
 	asn_DEF_encoding = asn_DEF_encoding_5;
 }
 #endif

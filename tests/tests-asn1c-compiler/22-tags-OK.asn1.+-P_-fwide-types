@@ -47,7 +47,8 @@ extern asn_TYPE_descriptor_t asn_DEF_b __attribute__((weak, alias("asn_DEF_b_3")
 #else
 static asn_TYPE_descriptor_t asn_DEF_b_3;
 static asn_TYPE_descriptor_t asn_DEF_b;
-__attribute__((constructor)) static void asn_DEF_b_3_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_b_3_alias_init)
+{
 	asn_DEF_b = asn_DEF_b_3;
 }
 #endif
@@ -297,7 +298,8 @@ extern asn_TYPE_descriptor_t asn_DEF_encoding __attribute__((weak, alias("asn_DE
 #else
 static asn_TYPE_descriptor_t asn_DEF_encoding_5;
 static asn_TYPE_descriptor_t asn_DEF_encoding;
-__attribute__((constructor)) static void asn_DEF_encoding_5_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_encoding_5_alias_init)
+{
 	asn_DEF_encoding = asn_DEF_encoding_5;
 }
 #endif

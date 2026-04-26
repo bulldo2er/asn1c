@@ -73,7 +73,8 @@ extern asn_TYPE_descriptor_t asn_DEF_r8 __attribute__((weak, alias("asn_DEF_r8_4
 #else
 static asn_TYPE_descriptor_t asn_DEF_r8_4;
 static asn_TYPE_descriptor_t asn_DEF_r8;
-__attribute__((constructor)) static void asn_DEF_r8_4_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_r8_4_alias_init)
+{
 	asn_DEF_r8 = asn_DEF_r8_4;
 }
 #endif
@@ -84,7 +85,8 @@ extern asn_TYPE_descriptor_t asn_DEF_r11 __attribute__((weak, alias("asn_DEF_r11
 #else
 static asn_TYPE_descriptor_t asn_DEF_r11_7;
 static asn_TYPE_descriptor_t asn_DEF_r11;
-__attribute__((constructor)) static void asn_DEF_r11_7_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_r11_7_alias_init)
+{
 	asn_DEF_r11 = asn_DEF_r11_7;
 }
 #endif
@@ -95,7 +97,8 @@ extern asn_TYPE_descriptor_t asn_DEF_criticalExtensions __attribute__((weak, ali
 #else
 static asn_TYPE_descriptor_t asn_DEF_criticalExtensions_3;
 static asn_TYPE_descriptor_t asn_DEF_criticalExtensions;
-__attribute__((constructor)) static void asn_DEF_criticalExtensions_3_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_criticalExtensions_3_alias_init)
+{
 	asn_DEF_criticalExtensions = asn_DEF_criticalExtensions_3;
 }
 #endif
@@ -575,7 +578,8 @@ extern asn_TYPE_descriptor_t asn_DEF_encoding __attribute__((weak, alias("asn_DE
 #else
 static asn_TYPE_descriptor_t asn_DEF_encoding_5;
 static asn_TYPE_descriptor_t asn_DEF_encoding;
-__attribute__((constructor)) static void asn_DEF_encoding_5_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_encoding_5_alias_init)
+{
 	asn_DEF_encoding = asn_DEF_encoding_5;
 }
 #endif

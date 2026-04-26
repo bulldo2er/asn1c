@@ -76,7 +76,8 @@ extern asn_TYPE_descriptor_t asn_DEF_restrictedCMR_Selection_r18 __attribute__((
 #else
 static asn_TYPE_descriptor_t asn_DEF_restrictedCMR_Selection_r18_6;
 static asn_TYPE_descriptor_t asn_DEF_restrictedCMR_Selection_r18;
-__attribute__((constructor)) static void asn_DEF_restrictedCMR_Selection_r18_6_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_restrictedCMR_Selection_r18_6_alias_init)
+{
 	asn_DEF_restrictedCMR_Selection_r18 = asn_DEF_restrictedCMR_Selection_r18_6;
 }
 #endif
@@ -116,7 +117,8 @@ extern asn_TYPE_descriptor_t asn_DEF_typeII_CJT_r18 __attribute__((weak, alias("
 #else
 static asn_TYPE_descriptor_t asn_DEF_typeII_CJT_r18_4;
 static asn_TYPE_descriptor_t asn_DEF_typeII_CJT_r18;
-__attribute__((constructor)) static void asn_DEF_typeII_CJT_r18_4_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_typeII_CJT_r18_4_alias_init)
+{
 	asn_DEF_typeII_CJT_r18 = asn_DEF_typeII_CJT_r18_4;
 }
 #endif
@@ -127,7 +129,8 @@ extern asn_TYPE_descriptor_t asn_DEF_restrictedCMR_Selection_r18 __attribute__((
 #else
 static asn_TYPE_descriptor_t asn_DEF_restrictedCMR_Selection_r18_10;
 static asn_TYPE_descriptor_t asn_DEF_restrictedCMR_Selection_r18;
-__attribute__((constructor)) static void asn_DEF_restrictedCMR_Selection_r18_10_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_restrictedCMR_Selection_r18_10_alias_init)
+{
 	asn_DEF_restrictedCMR_Selection_r18 = asn_DEF_restrictedCMR_Selection_r18_10;
 }
 #endif
@@ -167,7 +170,8 @@ extern asn_TYPE_descriptor_t asn_DEF_typeII_CJT_PortSelection_r18 __attribute__(
 #else
 static asn_TYPE_descriptor_t asn_DEF_typeII_CJT_PortSelection_r18_8;
 static asn_TYPE_descriptor_t asn_DEF_typeII_CJT_PortSelection_r18;
-__attribute__((constructor)) static void asn_DEF_typeII_CJT_PortSelection_r18_8_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_typeII_CJT_PortSelection_r18_8_alias_init)
+{
 	asn_DEF_typeII_CJT_PortSelection_r18 = asn_DEF_typeII_CJT_PortSelection_r18_8;
 }
 #endif
@@ -178,7 +182,8 @@ extern asn_TYPE_descriptor_t asn_DEF_type2 __attribute__((weak, alias("asn_DEF_t
 #else
 static asn_TYPE_descriptor_t asn_DEF_type2_3;
 static asn_TYPE_descriptor_t asn_DEF_type2;
-__attribute__((constructor)) static void asn_DEF_type2_3_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_type2_3_alias_init)
+{
 	asn_DEF_type2 = asn_DEF_type2_3;
 }
 #endif
@@ -189,7 +194,8 @@ extern asn_TYPE_descriptor_t asn_DEF_codebookType __attribute__((weak, alias("as
 #else
 static asn_TYPE_descriptor_t asn_DEF_codebookType_2;
 static asn_TYPE_descriptor_t asn_DEF_codebookType;
-__attribute__((constructor)) static void asn_DEF_codebookType_2_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_codebookType_2_alias_init)
+{
 	asn_DEF_codebookType = asn_DEF_codebookType_2;
 }
 #endif
@@ -746,7 +752,8 @@ extern asn_TYPE_descriptor_t asn_DEF_encoding __attribute__((weak, alias("asn_DE
 #else
 static asn_TYPE_descriptor_t asn_DEF_encoding_5;
 static asn_TYPE_descriptor_t asn_DEF_encoding;
-__attribute__((constructor)) static void asn_DEF_encoding_5_alias_init(void) {
+ASN_DEFINE_CONSTRUCTOR(asn_DEF_encoding_5_alias_init)
+{
 	asn_DEF_encoding = asn_DEF_encoding_5;
 }
 #endif
